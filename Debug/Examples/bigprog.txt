@@ -1,0 +1,43 @@
+KICKOFF
+WHILE 1
+choice = 0
+num1 = 0
+num2 = 0
+CHANT "What would you like to do?"
+CHANT "(1) Addition, (2) Subtraction, (3) Multiplication, (4) Division, (5) Sum of numbers"
+INPUTINT choice
+IF choice == 1 PASS
+CHANT "Input the two numbers"
+INPUTINT num1
+INPUTINT num2
+result = num1 + num2
+CHANT "Num1 + Num2 = " result
+TRICK IF choice == 2 PASS
+CHANT "Input the two numbers"
+INPUTINT num1
+INPUTINT num2
+result = num1 - num2
+CHANT "Num1 - Num2 = " result
+TRICK IF choice == 3 PASS
+CHANT "Input the two numbers"
+INPUTINT num1
+INPUTINT num2
+result = num1 * num2
+CHANT "Num1 * Num2 = " result
+TRICK IF choice == 4 PASS
+CHANT "Input the two numbers"
+INPUTINT num1
+INPUTINT num2
+result = num1 / num2
+CHANT "Num1 / Num2 = " result
+TRICK IF choice == 5 PASS
+CHANT "Input the number you want to sum up to"
+INPUTINT num1
+total = 0
+FOR i = 1 TO num1
+total = total + i
+DRIBBLE i
+CHANT "The sum of numbers up to " num1 " is " total
+SHOOT!
+MEXICANWAVE
+FINALWHISTLE

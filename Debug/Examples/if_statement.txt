@@ -1,0 +1,7 @@
+count = 0
+IF count == 1 PASS
+CHANT "Count already equals 1"
+TRICK
+count = count + 1
+CHANT "Count has been incremented"
+SHOOT!

@@ -1,0 +1,22 @@
+CONSTANT0 1 INTEGER
+VARIABLE0 choice
+CONSTANT1 0 INTEGER
+VARIABLE1 num1
+VARIABLE2 num2
+CONSTANT2 "What would you like to do?" STRING
+CONSTANT3 "(1) Addition, (2) Subtraction, (3) Multiplication, (4) Division, (5) Sum of numbers" STRING
+CONSTANT4 "Input the two numbers" STRING
+VARIABLE3 result
+CONSTANT5 "Num1 + Num2 = " STRING
+CONSTANT6 2 INTEGER
+CONSTANT7 "Num1 - Num2 = " STRING
+CONSTANT8 3 INTEGER
+CONSTANT9 "Num1 * Num2 = " STRING
+CONSTANT10 4 INTEGER
+CONSTANT11 "Num1 / Num2 = " STRING
+CONSTANT12 5 INTEGER
+CONSTANT13 "Input the number you want to sum up to" STRING
+VARIABLE4 total
+VARIABLE5 i
+CONSTANT14 "The sum of numbers up to " STRING
+CONSTANT15 " is " STRING
