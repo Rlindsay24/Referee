@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\codeGen.cpp" />
+    <ClCompile Include="..\source\lexer.cpp" />
+    <ClCompile Include="..\source\main.cpp" />
+    <ClCompile Include="..\source\stringmanip.cpp" />
+    <ClCompile Include="..\source\syntaxanalysis.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\source\codeGen.h" />
+    <ClInclude Include="..\source\lexer.h" />
+    <ClInclude Include="..\source\stringmanip.h" />
+    <ClInclude Include="..\source\syntaxanalysis.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{B801EAE3-5E14-401D-A08F-247AECD9A0A0}</ProjectGuid>
@@ -114,8 +127,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
