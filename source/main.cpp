@@ -12,7 +12,7 @@
 	Code Generation -	The syntactically correct tokens are used to generate Python code, by referencing the tokens with codeTable.txt.
 						The Python code is saved to a file specified by the input arguments.
 
-	Usage: ref.exe 'Path\To\Shootout_code.txt' 'Name\Of\Output_code.txt'
+	Usage: ref.exe 'Path\To\Shootout_code.txt' 'Name\Of\Output_code.py'
 	Richard Lindsay, 2018
 */
 

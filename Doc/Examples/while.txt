@@ -2,6 +2,6 @@ count = 0
 max = 0
 INPUT max
 WHILE count < max
-CHANT "DHEERAJ IS a really nice chap if I do say so myself"
+CHANT "ITS COMING HOME"
 count = count + 1
 MEXICANWAVE
