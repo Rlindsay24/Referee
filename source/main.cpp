@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 	}
 
 	//Lexical Analysis stage
-	convertToTokens(argv[1], S2T_TABLE, TOKEN_FILE);
+	convertToTokens(argv[1], S2T_TABLE, TOKEN_FILE, DATA_TABLE);
 
 
 	// Syntax Analysis stage

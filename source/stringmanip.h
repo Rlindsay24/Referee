@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 
-std::string constOrVar(const std::string &token);
-
 std::vector<std::string> split(const std::string &str, char delim);
 
 int findReplace(std::vector<std::string> &container, const std::string &toFind, const std::string &replace);

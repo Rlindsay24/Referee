@@ -7,8 +7,8 @@ using std::string;
 using std::ifstream; using std::ofstream;
 using std::vector;
 
-vector<string> getline(const string& filePath, const string &key)	// Returns a split line, searching for a key
-{
+vector<string> getline(const string& filePath, const string &key)	
+{	// Returns the line in a specified file associated with a key value. The returned line is split into a vector.
 	std::ifstream file(filePath);
 	string line;
 	while (std::getline(file, line)) {
@@ -23,45 +23,15 @@ vector<string> getline(const string& filePath, const string &key)	// Returns a s
 
 }
 
-string constOrVar(const string &token)
-{
-	static int constN = 0;
-	static int varN = 0; 
-	string call = "Assets\\constVarTable.txt";
-	ifstream ifile(call);
-	string line;
-	while (std::getline(ifile, line)) {
-		vector<string> splitLine = split(line, ' ');
-		if (splitLine[1] == token) {
-			return splitLine[0];
-		}
-	}
-	ifile.close();
-	ofstream ofile(call, std::fstream::app);
-	if (token[0] == '\"') {
-		ofile << "CONSTANT" + std::to_string(constN) << " " << token << " " << "STRING" << "\n";
-		ofile.close();
-		return "CONSTANT" + std::to_string(constN++);
-	} else if (is_numeric(token)) {
-		ofile << "CONSTANT" + std::to_string(constN) << " " << token << " " << "INTEGER" << "\n";
-		ofile.close();
-		return "CONSTANT" + std::to_string(constN++);
-	} else {
-		ofile << "VARIABLE" + std::to_string(varN) << " " << token << "\n";
-		ofile.close();
-		return "VARIABLE" + std::to_string(varN++);
-	}
-
-}
 
 vector<string> split(const string &str, char delim)
-{	
+{	// Splits a string into a vector, with a given delimiter character.
 	vector<string> splitLine;
 	auto left = str.begin();
 	auto right = left;
-	while (right < str.end()) { // While the line has not been fully checked
-		while (right < str.end() && *right != delim) { // Increment pointer
-			if (*right == '\"') { // Skip speech pairs, ignore \"
+	while (right < str.end()) {							// While the line has not been fully checked
+		while (right < str.end() && *right != delim) {	// Increment pointer
+			if (*right == '\"') {						// Skip speech pairs, ignore \"
 				++right;
 				while (right < str.end() && *right != '\"' && *(right-1) != '\\') {
 					++right; }
@@ -72,9 +42,8 @@ vector<string> split(const string &str, char delim)
 				++right;
 			}
 		} 
-
-		string part(left, right); // Store the string between the two
-		splitLine.push_back(part); // pointers in the array
+		string part(left, right);			// Store the string between the two
+		splitLine.push_back(part);			// pointers in the array
 		if (right < str.end()) {
 			left = ++right;
 		}
@@ -83,7 +52,7 @@ vector<string> split(const string &str, char delim)
 }
 
 int findReplace(vector<string> &container, const string &toFind, const string &replace)
-{
+{	// Finds a string in a vector and replaces it with another.
 	for (vector<string>::iterator i = container.begin();
 	     i < container.end();
 	     ++i) {
@@ -96,7 +65,7 @@ int findReplace(vector<string> &container, const string &toFind, const string &r
 }
 
 bool is_numeric(const string &str)
-{
+{	// Determines if a string is numeric using ASCII values.
 	for (auto it = str.begin(); it != str.end(); ++it) {
 		if (*it < 48 || *it > 57)
 			return false;
